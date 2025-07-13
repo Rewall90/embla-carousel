@@ -1,0 +1,20 @@
+[
+  {
+    "timestamp": "2025-07-11T12:06:22.404Z",
+    "action": "CREATE_CHECKPOINT",
+    "description": "Created checkpoint: v2_2025-07-11T12-06-22",
+    "details": "v2"
+  },
+  {
+    "timestamp": "2025-07-11T12:02:55.219Z",
+    "action": "CREATE_CHECKPOINT",
+    "description": "Created checkpoint: v1_2025-07-11T12-02-55",
+    "details": "v1"
+  },
+  {
+    "timestamp": "2025-07-11T11:47:11.437Z",
+    "action": "CREATE_CHECKPOINT",
+    "description": "Created checkpoint: fr_2025-07-11T11-47-11",
+    "details": "før"
+  }
+]
