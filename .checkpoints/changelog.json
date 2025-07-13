@@ -1,5 +1,17 @@
 [
   {
+    "timestamp": "2025-07-13T11:52:05.153Z",
+    "action": "CREATE_CHECKPOINT",
+    "description": "Created checkpoint: v4_2025-07-13T11-52-05",
+    "details": "v4"
+  },
+  {
+    "timestamp": "2025-07-13T11:49:32.228Z",
+    "action": "CREATE_CHECKPOINT",
+    "description": "Created checkpoint: v3_2025-07-13T11-49-32",
+    "details": "v3"
+  },
+  {
     "timestamp": "2025-07-11T12:06:22.404Z",
     "action": "CREATE_CHECKPOINT",
     "description": "Created checkpoint: v2_2025-07-11T12-06-22",
