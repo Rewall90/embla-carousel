@@ -2,31 +2,47 @@
   max-width: 48rem;
   margin: auto;
   --slide-height: 13.5rem;
-  --slide-spacing: 1rem;
-  --slide-size: 28%;
+  --slide-spacing: 0;
+  --slide-size: 18.18%;
 }
 .embla__viewport {
-  overflow: visible;
+  overflow: hidden;
 }
 .embla__container {
   display: flex;
   touch-action: pan-y pinch-zoom;
+  margin-left: calc(var(--slide-spacing) * -1);
 }
 .embla__slide {
   transform: translate3d(0, 0, 0);
-  flex: 0 0 33.33%;
+  flex: 0 0 var(--slide-size);
   min-width: 0;
-  overflow: hidden;
+  padding-left: var(--slide-spacing);
+  transition: flex-basis 0.3s ease; /* Smooth width transition */
+  position: relative; /* Required for absolute positioning of overlay */
 }
 
-.embla__slide--active .embla__slide__number {
-  transform: scaleX(1.3);
-  z-index: 10;
-  position: relative;
+/* Selected slide gets 50% wider than other slides (18.18% → 27.27%) */
+.embla__slide.is-selected {
+  flex: 0 0 27.27%; /* 27.27% width for selected slide (18.18% + 50% increase) */
 }
 
-.embla.is-dragging .embla__slide__number {
-  transition: none;
+/* Gradient overlay for selected slide only */
+.embla__slide.is-selected::before {
+  content: ''; /* Required for pseudo-element */
+  position: absolute; /* Position over the slide content */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.2) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(0, 0, 0, 0.1) 100%
+  ); /* Subtle gradient overlay */
+  pointer-events: none; /* Allow clicks to pass through to slide content */
+  z-index: 10; /* Higher z-index to overlay neighboring slides */
 }
 .embla__slide__number {
   box-shadow: none;
@@ -38,12 +54,7 @@
   justify-content: center;
   user-select: none;
   color: white;
-  aspect-ratio: 1 / 1;
-  transition: transform 0.3s ease;
-  transform-origin: center;
-  transform: scaleX(1);
-  width: 80%;
-  margin: 0 auto;
+  height: var(--slide-height); /* Fixed height for all slides */
 }
 
 .embla__slide:nth-child(1) .embla__slide__number {
@@ -64,6 +75,22 @@
 
 .embla__slide:nth-child(5) .embla__slide__number {
   background-color: #feca57;
+}
+
+.embla__slide:nth-child(6) .embla__slide__number {
+  background-color: #a29bfe;
+}
+
+.embla__slide:nth-child(7) .embla__slide__number {
+  background-color: #fd79a8;
+}
+
+.embla__slide:nth-child(8) .embla__slide__number {
+  background-color: #fdcb6e;
+}
+
+.embla__slide:nth-child(9) .embla__slide__number {
+  background-color: #6c5ce7;
 }
 .embla__controls {
   display: grid;

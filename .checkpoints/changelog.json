@@ -1,5 +1,77 @@
 [
   {
+    "timestamp": "2025-07-13T14:55:53.125Z",
+    "action": "CREATE_CHECKPOINT",
+    "description": "Created checkpoint: v10_2025-07-13T14-55-53",
+    "details": "v10"
+  },
+  {
+    "timestamp": "2025-07-13T14:54:07.788Z",
+    "action": "CREATE_CHECKPOINT",
+    "description": "Created checkpoint: v9_2025-07-13T14-54-07",
+    "details": "v9"
+  },
+  {
+    "timestamp": "2025-07-13T14:50:58.842Z",
+    "action": "CREATE_CHECKPOINT",
+    "description": "Created checkpoint: v8_2025-07-13T14-50-58",
+    "details": "v8"
+  },
+  {
+    "timestamp": "2025-07-13T14:50:22.298Z",
+    "action": "CREATE_CHECKPOINT",
+    "description": "Created checkpoint: v7_2025-07-13T14-50-22",
+    "details": "v7"
+  },
+  {
+    "timestamp": "2025-07-13T14:46:50.486Z",
+    "action": "CREATE_CHECKPOINT",
+    "description": "Created checkpoint: v6_2025-07-13T14-46-50",
+    "details": "v6"
+  },
+  {
+    "timestamp": "2025-07-13T14:27:46.774Z",
+    "action": "RESTORE_CHECKPOINT",
+    "description": "Restored checkpoint: v5_2025-07-13T14-19-19",
+    "details": "Emergency backup: emergency_backup_2025-07-13T14-27-45"
+  },
+  {
+    "timestamp": "2025-07-13T14:27:45.960Z",
+    "action": "CREATE_CHECKPOINT",
+    "description": "Created checkpoint: emergency_backup_2025-07-13T14-27-45_2025-07-13T14-27-45",
+    "details": "Auto-backup before restore"
+  },
+  {
+    "timestamp": "2025-07-13T14:21:07.078Z",
+    "action": "RESTORE_CHECKPOINT",
+    "description": "Restored checkpoint: v5_2025-07-13T14-19-19",
+    "details": "Emergency backup: emergency_backup_2025-07-13T14-21-06"
+  },
+  {
+    "timestamp": "2025-07-13T14:21:06.506Z",
+    "action": "CREATE_CHECKPOINT",
+    "description": "Created checkpoint: emergency_backup_2025-07-13T14-21-06_2025-07-13T14-21-06",
+    "details": "Auto-backup before restore"
+  },
+  {
+    "timestamp": "2025-07-13T14:19:19.121Z",
+    "action": "CREATE_CHECKPOINT",
+    "description": "Created checkpoint: v5_2025-07-13T14-19-19",
+    "details": "v5"
+  },
+  {
+    "timestamp": "2025-07-13T14:11:57.670Z",
+    "action": "RESTORE_CHECKPOINT",
+    "description": "Restored checkpoint: v1_2025-07-11T12-02-55",
+    "details": "Emergency backup: emergency_backup_2025-07-13T14-11-57"
+  },
+  {
+    "timestamp": "2025-07-13T14:11:57.096Z",
+    "action": "CREATE_CHECKPOINT",
+    "description": "Created checkpoint: emergency_backup_2025-07-13T14-11-57_2025-07-13T14-11-57",
+    "details": "Auto-backup before restore"
+  },
+  {
     "timestamp": "2025-07-13T11:52:05.153Z",
     "action": "CREATE_CHECKPOINT",
     "description": "Created checkpoint: v4_2025-07-13T11-52-05",

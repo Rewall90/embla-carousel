@@ -1,7 +1,7 @@
 {
-  "name": "v3_2025-07-13T11-49-32",
-  "timestamp": "2025-07-13T11:49:32.205Z",
-  "description": "v3",
+  "name": "v6_2025-07-13T14-46-50",
+  "timestamp": "2025-07-13T14:46:50.459Z",
+  "description": "v6",
   "files": [
     ".claude/doc/EmblaCarouselArrowButtonsTSX.md",
     ".claude/doc/EmblaCarouselDotButtonTSX.md",
@@ -16,7 +16,6 @@
     ".claude/doc/tsconfidJSON.md",
     ".claude/prime.md",
     ".claude/settings.local.json",
-    ".gitignore",
     ".prettierrc",
     "app/layout.tsx",
     "app/page.tsx",
@@ -36,6 +35,6 @@
     "styles/sandbox.css",
     "tsconfig.json"
   ],
-  "fileCount": 32,
-  "totalSize": 209172
+  "fileCount": 31,
+  "totalSize": 209430
 }

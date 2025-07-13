@@ -1,7 +1,7 @@
 {
-  "name": "fr_2025-07-11T11-47-11",
-  "timestamp": "2025-07-11T11:47:11.418Z",
-  "description": "før",
+  "name": "emergency_backup_2025-07-13T14-21-06_2025-07-13T14-21-06",
+  "timestamp": "2025-07-13T14:21:06.483Z",
+  "description": "Auto-backup before restore",
   "files": [
     ".claude/doc/EmblaCarouselArrowButtonsTSX.md",
     ".claude/doc/EmblaCarouselDotButtonTSX.md",
@@ -36,5 +36,5 @@
     "tsconfig.json"
   ],
   "fileCount": 31,
-  "totalSize": 208029
+  "totalSize": 208616
 }

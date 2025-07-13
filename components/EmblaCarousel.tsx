@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect, useCallback } from 'react'
+import React from 'react'
 import { EmblaOptionsType } from 'embla-carousel'
 import { DotButton, useDotButton } from './EmblaCarouselDotButton'
 import {
@@ -18,7 +18,6 @@ type PropType = {
 const EmblaCarousel: React.FC<PropType> = (props) => {
   const { slides, options } = props
   const [emblaRef, emblaApi] = useEmblaCarousel(options)
-  const [isDragging, setIsDragging] = useState(false)
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi)
@@ -30,31 +29,18 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     onNextButtonClick
   } = usePrevNextButtons(emblaApi)
 
-  const onDragStart = useCallback(() => {
-    setIsDragging(true)
-  }, [])
-
-  const onDragEnd = useCallback(() => {
-    setIsDragging(false)
-  }, [])
-
-  useEffect(() => {
-    if (emblaApi) {
-      emblaApi.on('pointerDown', onDragStart)
-      emblaApi.on('pointerUp', onDragEnd)
-    }
-  }, [emblaApi, onDragStart, onDragEnd])
-
   return (
-    <section className={`embla ${isDragging ? 'is-dragging' : ''}`}>
+    <section className="embla">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          {slides.map((slideIndex, index) => (
+          {slides.map((index) => (
             <div 
-              className={`embla__slide ${index === selectedIndex ? 'embla__slide--active' : ''}`}
-              key={slideIndex}
+              className={'embla__slide'.concat(
+                index === selectedIndex ? ' is-selected' : ''
+              )} 
+              key={index}
             >
-              <div className="embla__slide__number">{slideIndex + 1}</div>
+              <div className="embla__slide__number">{index + 1}</div>
             </div>
           ))}
         </div>

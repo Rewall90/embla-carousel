@@ -4,7 +4,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 const OPTIONS: EmblaOptionsType = { loop: true }
-const SLIDE_COUNT = 5
+const SLIDE_COUNT = 9
 const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
 export default function Home() {

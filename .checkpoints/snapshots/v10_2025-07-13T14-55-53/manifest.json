@@ -1,7 +1,7 @@
 {
-  "name": "v1_2025-07-11T12-02-55",
-  "timestamp": "2025-07-11T12:02:55.195Z",
-  "description": "v1",
+  "name": "v10_2025-07-13T14-55-53",
+  "timestamp": "2025-07-13T14:55:53.097Z",
+  "description": "v10",
   "files": [
     ".claude/doc/EmblaCarouselArrowButtonsTSX.md",
     ".claude/doc/EmblaCarouselDotButtonTSX.md",
@@ -36,5 +36,5 @@
     "tsconfig.json"
   ],
   "fileCount": 31,
-  "totalSize": 208405
+  "totalSize": 209792
 }
