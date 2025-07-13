@@ -16,6 +16,7 @@
   transform: translate3d(0, 0, 0);
   flex: 0 0 33.33%;
   min-width: 0;
+  overflow: hidden;
 }
 
 .embla__slide--active .embla__slide__number {
@@ -41,7 +42,8 @@
   transition: transform 0.3s ease;
   transform-origin: center;
   transform: scaleX(1);
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .embla__slide:nth-child(1) .embla__slide__number {
