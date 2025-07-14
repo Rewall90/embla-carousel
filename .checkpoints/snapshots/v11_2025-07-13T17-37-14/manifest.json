@@ -1,7 +1,7 @@
 {
-  "name": "v4_2025-07-13T11-52-05",
-  "timestamp": "2025-07-13T11:52:05.131Z",
-  "description": "v4",
+  "name": "v11_2025-07-13T17-37-14",
+  "timestamp": "2025-07-13T17:37:14.759Z",
+  "description": "v11",
   "files": [
     ".claude/doc/EmblaCarouselArrowButtonsTSX.md",
     ".claude/doc/EmblaCarouselDotButtonTSX.md",
@@ -16,7 +16,6 @@
     ".claude/doc/tsconfidJSON.md",
     ".claude/prime.md",
     ".claude/settings.local.json",
-    ".gitignore",
     ".prettierrc",
     "app/layout.tsx",
     "app/page.tsx",
@@ -26,6 +25,7 @@
     "components/Footer.tsx",
     "components/Header.tsx",
     "components/index.tsx",
+    "components/useWheelPhysics.ts",
     "next-env.d.ts",
     "next.config.js",
     "package-lock.json",
@@ -37,5 +37,5 @@
     "tsconfig.json"
   ],
   "fileCount": 32,
-  "totalSize": 209180
+  "totalSize": 214727
 }
