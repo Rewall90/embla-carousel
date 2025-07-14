@@ -13,25 +13,25 @@ export const useWheelPhysics = (slideCount: number) => {
     currentIndex: number,
     direction: 1 | -1
   ): PhysicsResult => {
-    // Simple momentum calculation: higher velocity = more slides
-    const momentum = Math.abs(velocity) * 70
+    // Enhanced momentum calculation for free spinning
+    const momentum = Math.abs(velocity) * 150
     
-    // Calculate distance with simple friction
-    const distance = Math.max(momentum * 0.9, 1)
+    // Calculate distance with very low friction
+    const distance = Math.max(momentum * 0.98, 0.5)
     
-    // Calculate target index with wrapping
+    // Calculate target position without forced snapping (wheel can stop anywhere)
     const rawTarget = currentIndex + (direction * distance)
-    const targetIndex = ((Math.round(rawTarget) % slideCount) + slideCount) % slideCount
+    const targetIndex = rawTarget // Allow fractional positions - no forced rounding
     
-    // Dynamic duration based on swipe aggressiveness
-    const baseTime = 600
-    const velocityMultiplier = Math.min(velocity * 2000, 3000) // Aggressive = longer
-    const distanceTime = distance * 200
+    // Velocity-based duration for realistic deceleration
+    const baseTime = 800
+    const velocityMultiplier = Math.min(velocity * 3000, 5000) // Aggressive = much longer
+    const distanceTime = distance * 100
     const duration = baseTime + velocityMultiplier + distanceTime
     
     return {
-      targetIndex,
-      duration: Math.min(duration, 5000)
+      targetIndex: Math.round(targetIndex), // Round to nearest slide for Embla
+      duration: Math.min(duration, 8000) // Allow very long spins
     }
   }, [slideCount])
 

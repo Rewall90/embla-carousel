@@ -34,9 +34,10 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     onNextButtonClick
   } = usePrevNextButtons(emblaApi)
 
-  const handleDragStart = useCallback(() => {
+  const handleDragStart = useCallback((emblaApi: any) => {
+    const startProgress = emblaApi.scrollProgress()
     dragStartPos.current = {
-      x: 0,
+      x: startProgress,
       time: Date.now()
     }
   }, [])
@@ -44,17 +45,22 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   const handleDragEnd = useCallback((emblaApi: any) => {
     if (!dragStartPos.current || isPhysicsScrolling.current) return
 
+    const endProgress = emblaApi.scrollProgress()
     const deltaTime = Date.now() - dragStartPos.current.time
-    if (deltaTime < 50) return // Too quick, ignore
+    const deltaX = endProgress - dragStartPos.current.x
+    
+    if (deltaTime < 50 || Math.abs(deltaX) < 0.01) return // Too quick or too small
 
-    // Simple velocity based on drag duration and distance
-    const velocity = 1000 / Math.max(deltaTime, 100) // Inverse of time
-    const direction = Math.random() > 0.5 ? 1 : -1 // Simple direction for now
+    // Calculate velocity from actual movement
+    const velocity = Math.abs(deltaX) / (deltaTime / 1000) // units per second
+    const direction = deltaX > 0 ? 1 : -1 // Proper direction detection
     
     const currentIndex = emblaApi.selectedScrollSnap()
     const physics = calculatePhysics(velocity, currentIndex, direction)
     
     isPhysicsScrolling.current = true
+    
+    // Use the physics target directly (wraps around due to loop: true)
     emblaApi.scrollTo(physics.targetIndex)
     
     setTimeout(() => {
